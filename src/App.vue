@@ -39,6 +39,13 @@
                         </v-list-item-icon>
                         <v-list-item-title>Home</v-list-item-title>
                     </v-list-item>
+
+                    <v-list-item @click="goMovie()">
+                        <v-list-item-icon>
+                            <v-icon>mdi-movie-open</v-icon>
+                        </v-list-item-icon>
+                        <v-list-item-title>MovieSearch</v-list-item-title>
+                    </v-list-item>
                 </v-list-item-group>
             </v-list>
         </v-navigation-drawer>
@@ -63,6 +70,9 @@ export default {
   methods: {
     goHome () {
       this.$router.push({ name: 'Home' })
+    },
+    goMovie () {
+      this.$router.push({ name: 'MovieSearch' })
     }
   }
 }
